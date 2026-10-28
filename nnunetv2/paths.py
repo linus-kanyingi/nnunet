@@ -17,9 +17,9 @@ import os
 PLEASE READ documentation/setting_up_paths.md FOR INFORMATION TO HOW TO SET THIS UP
 """
 
-nnUNet_raw="/home/dell/下载/my_nnunet/DATASET/nnUNet_raw"
-nnUNet_preprocessed="/home/dell/下载/my_nnunet/DATASET/nnUNet_preprocessed"
-nnUNet_results="/home/dell/下载/my_nnunet/DATASET/nnUNet_results"
+nnUNet_raw = os.environ.get('nnUNet_raw')
+nnUNet_preprocessed = os.environ.get('nnUNet_preprocessed')
+nnUNet_results = os.environ.get('nnUNet_results')
 
 if nnUNet_raw is None:
     print("nnUNet_raw is not defined and nnU-Net can only be used on data for which preprocessed files "
